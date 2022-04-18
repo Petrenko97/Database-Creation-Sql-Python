@@ -1,0 +1,179 @@
+
+
+
+
+INSERT INTO Brand ( brand_id, b_name, fame, country)
+VALUES (12345, 'Audi', 'great', 'Germany');
+
+INSERT INTO Brand ( brand_id, b_name, fame, country)
+VALUES (12346, 'Volvo', 'small', 'Sweden');
+
+INSERT INTO Brand ( brand_id, b_name, fame, country)
+VALUES (12347, 'Ferrari', 'word class', 'Italia');
+
+INSERT INTO Brand ( brand_id, b_name, fame, country)
+VALUES (100000001, 'Lamborghini', 'word class', 'Italia');
+
+INSERT INTO Brand ( brand_id, b_name, fame, country)
+VALUES (12312883, 'volgswagen', 'good', 'Spain');
+
+INSERT INTO Brand ( brand_id, b_name, fame, country)
+VALUES (111111223, 'Rover', 'average', 'France');
+
+INSERT INTO Brand ( brand_id, b_name, fame, country)
+VALUES (127755347, 'Jeep', 'good', 'Zambia');
+
+INSERT INTO Brand ( brand_id, b_name, fame, country)
+VALUES (1213120045, 'Noes', 'NONE', 'USA');
+-----------------
+
+INSERT INTO Model (model_id, m_name, safety_ratings, MPG, fk_brand)
+VALUES (1234, 'R8', 3, 112, 12345);
+
+INSERT INTO Model (model_id, m_name, safety_ratings, MPG, fk_brand)
+VALUES (1235, 'g5', 8, 100, 12346);
+
+INSERT INTO Model (model_id, m_name, safety_ratings, MPG, fk_brand)
+VALUES (1236, 'Oct16',41, 1, 12347);
+
+INSERT INTO Model (model_id, m_name, safety_ratings, MPG, fk_brand)
+VALUES (1237, 'C37', 6, 1, 12346);
+
+INSERT INTO Model (model_id, m_name, safety_ratings, MPG, fk_brand)
+VALUES (1238, 'Corsa23',15, 1, 12347);
+
+INSERT INTO Model (model_id, m_name, safety_ratings, MPG, fk_brand)
+VALUES (99993, 'Denzelo',12, 1,1213120045 );
+
+INSERT INTO Model (model_id, m_name, safety_ratings, MPG, fk_brand)
+VALUES (999923, 'Ronza',3, 1, 127755347 );
+
+INSERT INTO Model (model_id, m_name, safety_ratings, MPG, fk_brand)
+VALUES (9898993, 'Mini couper',1, 1, 1213120045 );
+
+INSERT INTO Model (model_id, m_name, safety_ratings, MPG, fk_brand)
+VALUES (003339, 'ismair',15, 3, 127755347 );
+
+INSERT INTO Model (model_id, m_name, safety_ratings, MPG, fk_brand)
+VALUES (454545, 'GTTRRR',15, 5, 1213120045 );
+
+INSERT INTO Model (model_id, m_name, safety_ratings, MPG)
+VALUES (65784, 'ENDURO',15, 6);
+
+-------------------
+
+INSERT INTO Dealer (d_id, d_name, d_surname, sold_num)
+VALUES (123, 'Chris', 'Papadopoulos',12);
+
+INSERT INTO Dealer (d_id, d_name, d_surname, sold_num)
+VALUES (124, 'Chris', 'Memtsas',3);
+
+INSERT INTO Dealer (d_id, d_name, d_surname, sold_num)
+VALUES (125, 'Dimitris', 'Apostolou',7);
+
+INSERT INTO Dealer (d_id, d_name, d_surname, sold_num)
+VALUES (126, 'Argiris', 'Papanastasioy',22);
+
+INSERT INTO Dealer (d_id, d_name, d_surname, sold_num)
+VALUES (127, 'Dhmhtra', 'Kiousi',4);
+
+INSERT INTO Dealer (d_id, d_name, d_surname, sold_num)
+VALUES (30303, 'Marcus', 'Rashford',1);
+
+INSERT INTO Dealer (d_id, d_name, d_surname, sold_num)
+VALUES (123331, 'jhonny', 'mac',3);
+
+INSERT INTO Dealer (d_id, d_name, d_surname, sold_num)
+VALUES (679988, 'Fridrich', 'Steiner',0);
+
+INSERT INTO Dealer (d_id, d_name, d_surname, sold_num)
+VALUES (1334563, 'Masio', 'Zardu',1);
+
+INSERT INTO Dealer (d_id, d_name, d_surname, sold_num)
+VALUES (49403, 'Kisda', 'Zabec',2);
+
+INSERT INTO Dealer (d_id, d_name, d_surname, sold_num)
+VALUES (27493, 'Mania', 'Reus',3);
+-------------------
+INSERT INTO Customer (c_id, c_name, c_surname, buyed_num,d_id)
+VALUES (12, 'chris', 'Kapou',1,123);
+
+INSERT INTO Customer (c_id, c_name, c_surname, buyed_num,d_id)
+VALUES (13, 'Aris', 'Kalmatzidis',2,125);
+
+INSERT INTO Customer (c_id, c_name, c_surname, buyed_num,d_id)
+VALUES (14, 'Giwrgos', 'Koudas',5,124);
+
+INSERT INTO Customer (c_id, c_name, c_surname, buyed_num,d_id)
+VALUES (15, 'Antionio', 'Meis',9,127);
+
+INSERT INTO Customer (c_id, c_name, c_surname, buyed_num,d_id)
+VALUES (16, 'Ismail', 'Blanco',14,126);
+
+
+INSERT INTO Customer (c_id, c_name, c_surname, buyed_num)
+VALUES (84305, 'Manos', 'Zaxas',3);
+
+INSERT INTO Customer (c_id, c_name, c_surname, buyed_num)
+VALUES (38493, 'Irodotos', 'Xrhstoy',0);
+
+INSERT INTO Customer (c_id, c_name, c_surname, buyed_num)
+VALUES (194734, 'Xristina', 'Anrwniou',2);
+
+INSERT INTO Customer (c_id, c_name, c_surname, buyed_num)
+VALUES (123974, 'Kwnstantina', 'Alexandrou',3);
+
+INSERT INTO Customer (c_id, c_name, c_surname, buyed_num)
+VALUES (034945, 'Maria', 'Nasou',4);
+
+INSERT INTO Customer (c_id, c_name, c_surname, buyed_num)
+VALUES (131283, 'Antwnis', 'Zachariou',5);
+
+-----------------------
+
+INSERT INTO Vehicle (VIN, Cost, manufacture_date,fk_model,fk_dealer)
+VALUES (01, 12222.3, '1997-12-11',1235,123);
+
+INSERT INTO Vehicle (VIN, Cost, manufacture_date,fk_model,fk_dealer)
+VALUES (02, 8902.3, '1993-01-02',1236,125);
+
+INSERT INTO Vehicle (VIN, Cost, manufacture_date,fk_model,fk_dealer)
+VALUES (03, 899902.3, '1998-08-23',1234,127);
+
+INSERT INTO Vehicle (VIN, Cost, manufacture_date,fk_model,fk_dealer)
+VALUES (04, 12.3, '1997-10-11',1235,127);
+
+INSERT INTO Vehicle (VIN, Cost, manufacture_date,fk_model)
+VALUES (09, 993.3, '2002-12-11',1235);
+
+INSERT INTO Vehicle (VIN, Cost, manufacture_date,fk_model)
+VALUES (08, 12.3, '2001-01-15',1237);
+
+INSERT INTO Vehicle (VIN, Cost, manufacture_date,fk_model)
+VALUES (0111111, 2222.3, '1997-11-11',1234);
+
+INSERT INTO Vehicle (VIN, Cost, manufacture_date,fk_model)
+VALUES (0111121, 8838.3, '2021-03-09',1236);
+
+-------------------------------------------------------
+INSERT INTO Options1 (opt_id, gas, screen,auto,fkO_model,fk_vehicle)
+VALUES (0001, 'yes', 'no','yes',1235,01);
+
+INSERT INTO Options1 (opt_id, gas, screen,auto,fkO_model,fk_vehicle)
+VALUES (0002, 'no','yes','no',1236,02);
+
+INSERT INTO Options1 (opt_id, gas, screen,auto,fkO_model,fk_vehicle)
+VALUES (0003, 'no','no','no',1237,03);
+
+INSERT INTO Options1 (opt_id, gas, screen,auto,fkO_model,fk_vehicle)
+VALUES (0004, 'yes','yes','yes',1234,04);
+
+INSERT INTO Options1 (opt_id, gas, screen,auto,fkO_model,fk_vehicle)
+VALUES (0005, 'yes','yes','yes',1234,03);
+
+INSERT INTO Options1 (opt_id, gas, screen,auto,fkO_model,fk_vehicle)
+VALUES (0006,'no','no','yes',1235,01);
+
+
+
+

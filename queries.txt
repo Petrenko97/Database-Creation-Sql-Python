@@ -1,0 +1,42 @@
+---- select the name of best customer  and  his  dealers 
+
+select c_name as customer_name ,c_surname, d_name as dealer_name,buyed_num as Car_purchases
+from Customer inner join Dealer on Customer.d_id=Dealer.d_id 
+where buyed_num=(select max(buyed_num)
+				 from customer);
+				 
+				
+				
+----Find the most expensive model's price name model,brand and which dealer sold it 
+
+select cost as Biggest_Price ,m_name as Model_name, b_name as Brand_Name,d_name as Dealer_name,d_surname as Dealer_surname
+from Dealer inner join Vehicle as  V1 on V1.fk_dealer=Dealer.d_id 
+inner join Model on Model.model_id=V1.fk_model
+inner join Brand on Brand.brand_id=Model.fk_brand
+where V1.cost=
+(select max(V2.cost)
+				 from Vehicle as V2 );
+				 
+				 
+----Inform customers about available cars
+
+select VIN,b_name,m_name,cost,VIN 
+from vehicle inner join Model on Vehicle.fk_model=Model.model_id
+inner join Brand on Brand.brand_id=Model.fk_brand
+where Vehicle.fk_dealer IS NULL;
+
+
+----- Check available customers. Initialy 60 msec
+
+CREATE INDEX ix_customers_name 
+ON customer(c_name, c_surname);
+
+----After indexing 48 msec
+
+select c_name as Available_customer_name,c_surname as  Available_customer_last
+from customer 
+where Customer.d_id IS NULL;
+
+
+
+				 

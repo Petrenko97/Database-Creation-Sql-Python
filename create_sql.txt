@@ -1,0 +1,71 @@
+DROP TABLE if exists Options1 cascade;
+DROP TABLE if exists Vehicle cascade;
+DROP TABLE if exists Brand cascade;
+drop table Model ;
+DROP TABLE Customer;
+drop table Dealer;
+
+
+CREATE TABLE Brand(
+    brand_id int  PRIMARY KEY, 
+    b_name varchar(25), 
+    fame varchar(30), 
+    country varchar(30)
+); 
+
+CREATE TABLE Model(
+    model_id int PRIMARY KEY, 
+    m_name varchar(25), 
+    safety_ratings INT, 
+    MPG int,
+    fk_brand int REFERENCES Brand(brand_id)
+	
+); 
+
+CREATE TABLE Dealer(
+    d_id int PRIMARY KEY, 
+    d_name varchar(25), 
+    d_surname varchar(25), 
+	sold_num int
+	
+); 
+
+CREATE TABLE Customer(
+    c_id int PRIMARY KEY, 
+    c_name varchar(25), 
+    c_surname varchar(25), 
+	buyed_num int,
+	d_id INT UNIQUE REFERENCES Dealer(d_id)
+	
+	
+); 
+
+
+
+CREATE TABLE Vehicle(
+    VIN int PRIMARY KEY, 
+    Cost float(10), 
+    manufacture_date DATE,
+    fk_model int REFERENCES Model(model_id),
+    fk_dealer int REFERENCES Dealer(d_id)	
+); 
+
+
+
+CREATE TABLE Options1(
+    opt_id int PRIMARY KEY, 
+    gas varchar(25), 
+    screen varchar(25), 
+    auto varchar(25),
+	fkO_model int REFERENCES Model(model_id),
+    fk_vehicle int REFERENCES Vehicle(VIN)	
+); 
+
+
+
+
+
+
+
+
+
